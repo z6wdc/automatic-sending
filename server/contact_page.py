@@ -13,3 +13,6 @@ def input_email(email):
 
 def input_phone(phone):
     browser.find_element_by_class_name("").input(name)
+
+def click_send(phone):
+    browser.find_element_by_id("name").click(name)
