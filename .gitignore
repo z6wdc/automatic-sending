@@ -10,7 +10,6 @@ __pycache__/
 venv
 
 # File
-*.csv
 chromedriver
 
 # IDE
