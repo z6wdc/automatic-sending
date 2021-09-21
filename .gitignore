@@ -1,6 +1,9 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 
+# Unit test / coverage reports
+.pytest_cache/
+
 # Environments
 .env
 .venv
@@ -11,7 +14,6 @@ venv
 chromedriver
 
 # IDE
-
 
 # MAC
 .DS_Store
