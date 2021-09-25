@@ -12,7 +12,8 @@ venv
 # File
 chromedriver
 
-# IDE
+# Jupyter Notebook
+.ipynb_checkpoints
 
 # MAC
 .DS_Store
