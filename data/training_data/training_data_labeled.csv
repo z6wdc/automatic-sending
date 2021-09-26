@@ -624,9 +624,9 @@ https://www.data4cs.co.jp/,"<input id=""company"" name=""会社名"" size=""60""
 https://www.data4cs.co.jp/,"<textarea cols=""50"" name=""ask"" rows=""5""></textarea>",content
 https://www.data4cs.co.jp/,"<input name=""your_email"" size=""60"" type=""text"" value=""""/>",email
 https://www.data4cs.co.jp/,"<input class=""name1"" data-conv-half-alphanumeric=""true"" maxlength=""10"" name=""名"" placeholder=""名"" size=""10"" type=""text"" value=""""/>",first_name
-https://www.data4cs.co.jp/,"<input class=""name1"" data-conv-half-alphanumeric=""true"" maxlength=""10"" name=""メイ"" placeholder=""メイ"" size=""10"" type=""text"" value=""""/>",first_name
+https://www.data4cs.co.jp/,"<input class=""name1"" data-conv-half-alphanumeric=""true"" maxlength=""10"" name=""メイ"" placeholder=""メイ"" size=""10"" type=""text"" value=""""/>",first_name_furi
 https://www.data4cs.co.jp/,"<input class=""name1"" data-conv-half-alphanumeric=""true"" maxlength=""10"" name=""姓"" placeholder=""姓"" size=""10"" type=""text"" value=""""/>",last_name
-https://www.data4cs.co.jp/,"<input class=""name1"" data-conv-half-alphanumeric=""true"" maxlength=""10"" name=""セイ"" placeholder=""セイ"" size=""10"" type=""text"" value=""""/>",last_name
+https://www.data4cs.co.jp/,"<input class=""name1"" data-conv-half-alphanumeric=""true"" maxlength=""10"" name=""セイ"" placeholder=""セイ"" size=""10"" type=""text"" value=""""/>",last_name_furi
 https://www.data4cs.co.jp/,"<option value=""キャリア求人へのご応募、採用に関するお問合せ"">
 			キャリア求人へのご応募、採用に関するお問合せ		</option>",subject
 https://www.data4cs.co.jp/,"<input data-conv-half-alphanumeric=""true"" maxlength=""5"" name=""連絡先電話番号[data][0]"" size=""6"" type=""text"" value=""""/>",tel_1
