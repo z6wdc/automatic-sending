@@ -22,7 +22,7 @@ def get_contact_url(url):
 
         if 'http' in href:
             href_list = href
-        else:
+        elif href:
             href_list = url + href
 
     return href_list
@@ -74,17 +74,30 @@ def write_csv(dict):
                 writer.writerow([url, input, name])
 
 
-error_url_list = []
+result_list = {}
+checked_dict = {}
 input_dict = {}
+
+with open(data_path + 'checked_url_list.csv', newline='') as checked_csv:
+    reader = csv.reader(checked_csv)
+    checked_dict = {rows[0]: rows[1] for rows in reader}
 
 for file in os.listdir(data_path):
     if file.endswith('.csv') and file.startswith('company_list'):
-        with open(data_path + file, newline='') as csvfile:
+        with open(data_path + file, newline='', encoding='utf-8') as csvfile:
             # 讀取 CSV 檔案內容
             rows = csv.reader(csvfile)
 
             for row in rows:
                 url = row[1]
+
+                if 'http' not in url:
+                    result_list[url] = 'wrong url'
+                    continue
+
+                if url in checked_dict:
+                    result_list[url] = 'already checked'
+                    continue
 
                 try:
                     contact_url = get_contact_url(url)
@@ -94,9 +107,14 @@ for file in os.listdir(data_path):
 
                         if contact_form:
                             input_dict[url] = contact_form
+                            result_list[url] = 'OK'
+                        else:
+                            result_list[url] = 'contact form not found'
+                    else:
+                        result_list[url] = 'contact page not found'
                 except:
-                    error_url_list = url
+                    result_list[url] = 'unexpected error'
 
-# print(error_url_list)
 
+print(result_list)
 write_csv(input_dict)
