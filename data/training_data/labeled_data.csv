@@ -215,14 +215,14 @@ https://intelligible.work/,"<input maxlength=""100"" name=""v[3][2]"" placeholde
 https://www.eps.co.jp/ja/service/index.html,"<input class=""text_name"" maxlength=""255"" minlength=""1"" name=""add1"" placeholder=""例：新宿区下宮比町"" type=""text"" value=""""/>",address_shi
 https://www.dhorizon.co.jp/,"<input class=""text_l"" name=""市区町村"" type=""text""/>",address_shi
 https://www.crie.co.jp/,"<input class=""input-text -adr1 p-locality p-street-address p-extended-address"" name=""address1"" placeholder=""市区町村・番地（例）高松市磨屋町2-8"" type=""text"" value=""""/>",address_shi_ban
-https://www.tasnet.jp/,"<input class=""input_area"" id=""address"" name=""adress"" type=""text""/>",adress
+https://www.tasnet.jp/,"<input class=""input_area"" id=""address"" name=""adress"" type=""text""/>",address
 http://www.e-stag-e.co.jp/,"<input class=""wd30"" name=""都道府県"" placeholder=""都道府県"" type=""text""/>",city
 https://bps21.jp/,"<input autocapitalize=""off"" autocorrect=""off"" class=""i-type-text"" id=""i-city"" name=""city"" type=""text""/>",city
 https://forspec.co.jp/,"<input name=""city"" type=""text""/>",city
 https://www.cy-com.co.jp/,"<input aria-invalid=""false"" class=""wpcf7-form-control wpcf7-text"" id=""pref"" name=""pref"" size=""10"" type=""text"" value=""""/>",city
 https://www.johnan.com/,"<input checktype=""c1"" class=""p-region"" maxlength=""10"" name=""AddressRegion"" placeholder=""例：京都府"" type=""text""/>",city
 https://www.netcorp.jp/,"<input aria-invalid=""false"" class=""wpcf7-form-control wpcf7-text p-region w100per"" name=""pref"" size=""40"" type=""text"" value=""""/>",city
-https://www.nihonlogix.co.jp/,"<option label=""沖縄県"" value=""沖縄県"">沖縄県</option>",city
+https://www.nihonlogix.co.jp/,"<option label=""沖縄県"" value=""沖縄県"">沖縄県</option>",city_okinawa
 https://www.nitto-tech.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required"" name=""addr01"" placeholder=""都道府県"" size=""40"" type=""text"" value=""""/>",city
 https://www.eps.co.jp/ja/service/index.html,"<input class=""text_name"" maxlength=""255"" minlength=""1"" name=""pref"" placeholder=""例：東京都"" type=""text"" value=""""/>",city
 http://www.next-move.co.jp/,"<input aria-invalid=""false"" class=""wpcf7-form-control wpcf7-text"" id=""pref"" name=""pref"" placeholder=""◯◯県"" size=""40"" type=""text"" value=""""/>",city
