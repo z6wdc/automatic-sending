@@ -1402,9 +1402,9 @@ https://www.bandainamcostudios.com/,"<input aria-invalid=""false"" class=""wpcf7
 https://www.faboc.co.jp/,"<input class=""form-deco"" name=""e_mobile"" placeholder=""例：090-xxxx-xxxx"" style=""ime-mode:disabled"" type=""text"" value=""""/>",mobile
 https://www.maruweb.co.jp/ja/,"<input aria-invalid=""false"" class=""wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel inputxt"" name=""phone_en"" placeholder=""090-0000-000"" size=""40"" type=""tel"" value=""""/>",mobile
 https://www.techvan.co.jp/,"<input class=""elq-item-input"" id=""fe4242"" name=""mobilePhone_0-13"" style=""width:100%;"" type=""text"" value=""""/>",mobile
-https://www.kcct.co.jp/,"<input accesskey=""j"" id=""tel1"" maxlength=""4"" name=""keitai1"" size=""4"" tabindex=""15"" type=""text"" value=""""/>",mobile_1
-https://www.kcct.co.jp/,"<input accesskey=""k"" id=""keitai2"" maxlength=""4"" name=""keitai2"" size=""4"" tabindex=""16"" type=""text"" value=""""/>",mobile_2
-https://www.kcct.co.jp/,"<input accesskey=""l"" id=""keitai3"" maxlength=""4"" name=""keitai3"" size=""4"" tabindex=""17"" type=""text"" value=""""/>",mobile_3
+https://www.kcct.co.jp/,"<input accesskey=""j"" id=""tel1"" maxlength=""4"" name=""keitai1"" size=""4"" tabindex=""15"" type=""text"" value=""""/>",mobile
+https://www.kcct.co.jp/,"<input accesskey=""k"" id=""keitai2"" maxlength=""4"" name=""keitai2"" size=""4"" tabindex=""16"" type=""text"" value=""""/>",mobile
+https://www.kcct.co.jp/,"<input accesskey=""l"" id=""keitai3"" maxlength=""4"" name=""keitai3"" size=""4"" tabindex=""17"" type=""text"" value=""""/>",mobile
 http://delta-souken.co.jp/company/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required"" name=""your-name"" placeholder=""例：山田　太郎"" size=""40"" type=""text"" value=""""/>",name
 http://linlinc.co.jp/,"<input name=""name"" type=""text""/>",name
 http://www.e-stag-e.co.jp/,"<input class=""wd80"" name=""氏名"" type=""text""/>",name
@@ -2043,21 +2043,21 @@ https://www.bemac-jp.com/,"<input aria-invalid=""false"" aria-required=""true"" 
 http://www.next-move.co.jp/,"<input aria-invalid=""false"" class=""wpcf7-form-control wpcf7-text"" id=""zip"" name=""zip"" placeholder=""123-4567"" size=""40"" type=""text"" value=""""/>",zip
 https://www.livesense.co.jp/,"<input class=""input input-sm"" maxlength=""8"" name=""zip"" placeholder=""123-4567"" size=""60"" type=""text"" value=""""/>",zip
 https://www.dhorizon.co.jp/,"<input class=""text_s"" name=""郵便番号"" onkeyup=""AjaxZip3.zip2addr(this,'','都道府県','市区町村');"" type=""text""/>",zip
-http://www.c3w.co.jp/,"<input class=""fText fText02"" maxlength=""3"" name=""address01"" type=""text"" value=""""/>",zip_1
-https://www.kcct.co.jp/,"<input accesskey=""g"" id=""zip1"" maxlength=""3"" name=""zip1"" size=""3"" tabindex=""6"" type=""text"" value=""""/>",zip_1
-https://www.scskserviceware.co.jp/,"<input maxlength=""3"" name=""Public::Application::Userenquete_D__P__D_zip1"" size=""3"" type=""text""/>",zip_1
-https://www.ventuno.jp/,"<input class=""box80 validate[custom[number]]"" maxlength=""3"" name=""zip01"" style=""; ime-mode: disabled;"" type=""tel"" value=""""/>",zip_1
-https://www.esna.jp/,"<input id=""yubin1"" maxlength=""3"" name=""yubin1"" placeholder=""105"" type=""text"" value=""""/>",zip_1
-https://www.crie.co.jp/,"<input class=""input-text -zip1 p-postal-code hankaku"" maxlength=""3"" name=""zip1"" placeholder=""760"" type=""text"" value=""""/>",zip_1
-https://www.eps.co.jp/ja/service/index.html,"<input class=""zip"" maxlength=""7"" name=""zip1"" placeholder=""例：162"" type=""text"" value=""""/>",zip_1
-https://www.flinters.co.jp/,"<input id=""e_21[zip1]"" maxlength=""3"" name=""e_21[zip1]"" size=""3"" type=""text"" value=""""/>",zip_1
-https://www.aspark-medical.co.jp/,"<input maxlength=""3"" name=""yubin1"" size=""3"" type=""text"" value=""""/>",zip_1
-http://www.c3w.co.jp/,"<input class=""fText fText03"" maxlength=""4"" name=""address02"" type=""text"" value=""""/>",zip_2
-https://www.kcct.co.jp/,"<input accesskey=""h"" id=""zip2"" maxlength=""4"" name=""zip2"" onkeyup=""AjaxZip3.zip2addr('zip1','zip2','address01','address02');"" size=""4"" tabindex=""7"" type=""text"" value=""""/>",zip_2
-https://www.scskserviceware.co.jp/,"<input maxlength=""4"" name=""Public::Application::Userenquete_D__P__D_zip2"" size=""4"" type=""text""/>",zip_2
-https://www.ventuno.jp/,"<input class=""box110 validate[custom[number]]"" maxlength=""4"" name=""zip02"" style=""; ime-mode: disabled;"" type=""tel"" value=""""/>",zip_2
-https://www.esna.jp/,"<input id=""yubin2"" maxlength=""4"" name=""yubin2"" placeholder=""0012"" type=""text"" value=""""/>",zip_2
-https://www.crie.co.jp/,"<input class=""input-text -zip2 p-postal-code hankaku"" maxlength=""4"" name=""zip2"" placeholder=""0026"" type=""text"" value=""""/>",zip_2
-https://www.eps.co.jp/ja/service/index.html,"<input class=""zip"" maxlength=""7"" name=""zip2"" onkeyup=""AjaxZip3.zip2addr('zip1','zip2','pref','add1');"" placeholder=""例：0822"" type=""text"" value=""""/>",zip_2
-https://www.flinters.co.jp/,"<input id=""e_21[zip2]"" maxlength=""4"" name=""e_21[zip2]"" size=""4"" type=""text"" value=""""/>",zip_2
-https://www.aspark-medical.co.jp/,"<input maxlength=""4"" name=""yubin2"" size=""4"" type=""text"" value=""""/>",zip_2
+http://www.c3w.co.jp/,"<input class=""fText fText02"" maxlength=""3"" name=""address01"" type=""text"" value=""""/>",zip
+https://www.kcct.co.jp/,"<input accesskey=""g"" id=""zip1"" maxlength=""3"" name=""zip1"" size=""3"" tabindex=""6"" type=""text"" value=""""/>",zip
+https://www.scskserviceware.co.jp/,"<input maxlength=""3"" name=""Public::Application::Userenquete_D__P__D_zip1"" size=""3"" type=""text""/>",zip
+https://www.ventuno.jp/,"<input class=""box80 validate[custom[number]]"" maxlength=""3"" name=""zip01"" style=""; ime-mode: disabled;"" type=""tel"" value=""""/>",zip
+https://www.esna.jp/,"<input id=""yubin1"" maxlength=""3"" name=""yubin1"" placeholder=""105"" type=""text"" value=""""/>",zip
+https://www.crie.co.jp/,"<input class=""input-text -zip1 p-postal-code hankaku"" maxlength=""3"" name=""zip1"" placeholder=""760"" type=""text"" value=""""/>",zip
+https://www.eps.co.jp/ja/service/index.html,"<input class=""zip"" maxlength=""7"" name=""zip1"" placeholder=""例：162"" type=""text"" value=""""/>",zip
+https://www.flinters.co.jp/,"<input id=""e_21[zip1]"" maxlength=""3"" name=""e_21[zip1]"" size=""3"" type=""text"" value=""""/>",zip
+https://www.aspark-medical.co.jp/,"<input maxlength=""3"" name=""yubin1"" size=""3"" type=""text"" value=""""/>",zip
+http://www.c3w.co.jp/,"<input class=""fText fText03"" maxlength=""4"" name=""address02"" type=""text"" value=""""/>",zip
+https://www.kcct.co.jp/,"<input accesskey=""h"" id=""zip2"" maxlength=""4"" name=""zip2"" onkeyup=""AjaxZip3.zip2addr('zip1','zip2','address01','address02');"" size=""4"" tabindex=""7"" type=""text"" value=""""/>",zip
+https://www.scskserviceware.co.jp/,"<input maxlength=""4"" name=""Public::Application::Userenquete_D__P__D_zip2"" size=""4"" type=""text""/>",zip
+https://www.ventuno.jp/,"<input class=""box110 validate[custom[number]]"" maxlength=""4"" name=""zip02"" style=""; ime-mode: disabled;"" type=""tel"" value=""""/>",zip
+https://www.esna.jp/,"<input id=""yubin2"" maxlength=""4"" name=""yubin2"" placeholder=""0012"" type=""text"" value=""""/>",zip
+https://www.crie.co.jp/,"<input class=""input-text -zip2 p-postal-code hankaku"" maxlength=""4"" name=""zip2"" placeholder=""0026"" type=""text"" value=""""/>",zip
+https://www.eps.co.jp/ja/service/index.html,"<input class=""zip"" maxlength=""7"" name=""zip2"" onkeyup=""AjaxZip3.zip2addr('zip1','zip2','pref','add1');"" placeholder=""例：0822"" type=""text"" value=""""/>",zip
+https://www.flinters.co.jp/,"<input id=""e_21[zip2]"" maxlength=""4"" name=""e_21[zip2]"" size=""4"" type=""text"" value=""""/>",zip
+https://www.aspark-medical.co.jp/,"<input maxlength=""4"" name=""yubin2"" size=""4"" type=""text"" value=""""/>",zip
