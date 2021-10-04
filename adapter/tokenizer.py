@@ -36,7 +36,7 @@ class InputTagTokenizer(object):
 
         s = html_soup.find('option')
         if s is not None:
-            words.extend(self.__attrs_values_from_option(s))
+            words.extend(self.__attrs_values_from_select(s))
 
         s = html_soup.find('textarea')
         if s is not None:
@@ -66,16 +66,21 @@ class InputTagTokenizer(object):
 
         return words
 
-    def __attrs_values_from_option(self, option_tag):
+    def __attrs_values_from_select(self, select_tag):
         words = []
-
-        target_attr = ['value', 'label']
-        for k in target_attr:
-            if (k not in option_tag.attrs) or (option_tag.attrs[k] == ''):
+        for k in self.target_attributes:
+            if (k not in select_tag.attrs) or (select_tag.attrs[k] == ''):
                 continue
 
-            for token in self.__preprocess(option_tag.attrs[k]):
+            for token in self.__preprocess(select_tag.attrs[k]):
                 words.append(token)
+
+        inner_options = select_tag.find_all('option')
+        for option in inner_options:
+            if len(option.contents) > 0:
+                word = option.contents[0]
+                for token in self.__preprocess(word):
+                    words.append(token)
 
         return words
 

@@ -72,10 +72,8 @@ def get_contact_form(url):
         selects = form.find_all('select')
 
         for select in selects:
-            options = select.find_all('option')
-            for option in options:
-                name = option.get('value')
-                result[option] = name
+            name = select.get('name')
+            result[select] = name
 
     return result
 
