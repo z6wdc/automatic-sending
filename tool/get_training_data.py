@@ -8,24 +8,44 @@ data_path = '../data/'
 
 
 def get_contact_url(url):
-    contact_word = 'contact'
+    href_keyword_list = ['contact', 'inquiry', 'otoiawase', 'toiawase', 'form', 'mailform', 'contactform', 'support',
+                    'contactus', 'contact_form', 'info', 'inquiries', 'customer', 'mailbox', 'ask', 'mailto']
+    page_keyword_list = ['お問合せ', 'コンタクト', 'お問い合わせ', 'コンタクトフォーム', 'Contact', 'Contact Form', 'Contact Us']
+
     href_list = []
 
     r = requests.get(url)
     soup = BeautifulSoup(r.content, 'html.parser')
 
-    tags = soup.find_all('a', href=lambda h: h and contact_word in h)
+    for contact_word in href_keyword_list:
+        tags = soup.find_all('a', href=lambda h: h and contact_word in h)
 
-    for tag in tags:
-        # 輸出超連結的文字
-        href = tag.get('href')
+        for tag in tags:
+            # 輸出超連結的文字
+            href = tag.get('href')
 
-        if 'http' in href:
-            href_list = href
-        elif href:
-            href_list = url + href
+            if 'http' in href:
+                href_list = href
+            elif href:
+                href_list = url + href
 
-    return href_list
+        if href_list:
+            return href_list
+
+    for contact_word in page_keyword_list:
+        tags = soup.find_all('a', string=lambda s: s and contact_word in s)
+
+        for tag in tags:
+            # 輸出超連結的文字
+            href = tag.get('href')
+
+            if 'http' in href:
+                href_list = href
+            elif href:
+                href_list = url + href
+
+        if href_list:
+            return href_list
 
 
 def get_contact_form(url):
@@ -52,15 +72,22 @@ def get_contact_form(url):
         selects = form.find_all('select')
 
         for select in selects:
-            options = select.find_all('option')
-            for option in options:
-                name = option.get('value')
-                result[option] = name
+            name = select.get('name')
+            result[select] = name
 
     return result
 
 
-def write_csv(dict):
+def write_result_csv(dict):
+    with open(data_path + '/checked_url_list.csv', 'w', newline='') as csvfile:
+        # 建立 CSV 檔寫入器
+        writer = csv.writer(csvfile)
+
+        for url, result in dict.items():
+            writer.writerow([url, result])
+
+
+def write_data_csv(dict):
     with open(data_path + '/training_data/training_data_' + time.strftime("%Y%m%d%H%M%S") + '.csv', 'w', newline='') as csvfile:
         # 建立 CSV 檔寫入器
         writer = csv.writer(csvfile)
@@ -96,7 +123,7 @@ for file in os.listdir(data_path):
                     continue
 
                 if url in checked_dict:
-                    result_list[url] = 'already checked'
+                    # result_list[url] = 'already checked'
                     continue
 
                 try:
@@ -109,12 +136,22 @@ for file in os.listdir(data_path):
                             input_dict[url] = contact_form
                             result_list[url] = 'OK'
                         else:
-                            result_list[url] = 'contact form not found'
+                            second_contact_url = get_contact_url(contact_url)
+
+                            if second_contact_url:
+                                second_contact_form = get_contact_form(second_contact_url)
+
+                                if second_contact_form:
+                                    input_dict[url] = second_contact_form
+                                    result_list[url] = 'OK'
+                                else:
+                                    result_list[url] = 'contact form not found'
+                            else:
+                                result_list[url] = 'contact form not found'
                     else:
                         result_list[url] = 'contact page not found'
                 except:
                     result_list[url] = 'unexpected error'
 
-
-print(result_list)
-write_csv(input_dict)
+write_result_csv(result_list)
+write_data_csv(input_dict)
