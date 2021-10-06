@@ -4,16 +4,20 @@
 
 Collect the company data.
 
-## web
+## script
 
-The UI interface for interacting with the server
+The script to execute the whole flow.
 
 ## server
 
-Recieve the data and generate the result
+- Store the user data.
+
+- Get the contact page URL from the main page URL.
+
+- Get the contact page input tag from the contact page.
+
+- Label the input tag in the contact page.
 
 ## model
 
-- Classify the DOM element at the main page
-
-- Classify the DOM element at the contact page
+- Classify the DOM element at the main page.
