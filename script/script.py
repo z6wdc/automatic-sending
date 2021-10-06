@@ -36,7 +36,7 @@ def input_data(url, data):
 
 def init_webdriver(url):
     try:
-        driver = webdriver.Chrome(executable_path='./server/chromedriver')
+        driver = webdriver.Chrome(executable_path='./script/chromedriver')
         driver.set_page_load_timeout(30)
         driver.get(url)
         return driver
