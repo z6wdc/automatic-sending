@@ -9,9 +9,6 @@ __pycache__/
 .venv
 venv
 
-# File
-chromedriver
-
 # Jupyter Notebook
 .ipynb_checkpoints
 
