@@ -27,7 +27,10 @@ def get_contact_url(url):
             if 'http' in href:
                 href_list = href
             elif href:
-                href_list = url + href
+                if url.endswith('/') and href.startswith('/'):
+                    href_list = url + href[1:]
+                else:
+                    href_list = url + href
 
         if href_list:
             return href_list
@@ -42,7 +45,10 @@ def get_contact_url(url):
             if 'http' in href:
                 href_list = href
             elif href:
-                href_list = url + href
+                if url.endswith('/') and href.startswith('/'):
+                    href_list = url + href[1:]
+                else:
+                    href_list = url + href
 
         if href_list:
             return href_list
@@ -123,7 +129,7 @@ for file in os.listdir(data_path):
                     continue
 
                 if url in checked_dict:
-                    # result_list[url] = 'already checked'
+                    result_list[url] = 'already checked'
                     continue
 
                 try:
