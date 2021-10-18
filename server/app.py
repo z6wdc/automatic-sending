@@ -4,19 +4,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return 'Hello World!'
+    return 'Automatic Sending'
 
-@app.route('/user', methods=['POST'])
-def user_data():
-    return request.form['query']
+@app.route('/contact/url', methods=['POST'])
+def contact_url():
+    return request.get_data()
 
-@app.route('/company', methods=['POST'])
-def company_data():
-    return request.form['query']
+@app.route('/contact/html', methods=['POST'])
+def contact_html():
+    return request.get_data()
 
-@app.route('/result')
-def result():
-    return request.args.get('id')
+@app.route('/contact/tag', methods=['POST'])
+def contact_tag():
+    return request.get_data()
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0', port=8888)

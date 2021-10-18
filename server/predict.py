@@ -1,10 +1,7 @@
-# from flask import Flask, request, jsonify, make_response
 from model.lsi import LsiEstimator
 from adapter.inference import CSVInferenceAdapter
 import csv
 
-
-# app = Flask(__name__)
 model = None
 
 def main():

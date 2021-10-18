@@ -2,13 +2,14 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 
 TEST_URL = 'https://www.data4cs.co.jp/contact'
+
 TEST_DATA = {
     '<input type="text" name="会社名" id="company" size="60" value>':'株式会社 AI Academy',
     '<input class="name1" data-conv-half-alphanumeric="true" maxlength="10" name="名" placeholder="名" size="10" type="text" value=""/>':'育豪',
     '<input class="name1" data-conv-half-alphanumeric="true" maxlength="10" name="メイ" placeholder="メイ" size="10" type="text" value=""/>':'イクゴウ',
     '<input class="name1" data-conv-half-alphanumeric="true" maxlength="10" name="姓" placeholder="姓" size="10" type="text" value=""/>':'張',
     '<input class="name1" data-conv-half-alphanumeric="true" maxlength="10" name="セイ" placeholder="セイ" size="10" type="text" value=""/>':'チョウ'
-    }
+}
 
 def input_data(url, data):
     driver = init_webdriver(url)
