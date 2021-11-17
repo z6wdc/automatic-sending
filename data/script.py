@@ -2,6 +2,9 @@ import csv
 import glob
 
 def generate_company_list():
+    """
+    Generate the company list from the result csv file.
+    """
     csv_list = glob.glob('./data/result-*.csv')
 
     data = []
@@ -20,6 +23,9 @@ def generate_company_list():
             writer.writerow(row)
 
 def get_label():
+    """
+    List the label's name.
+    """
     data = []
     with open('./data/training_data/labeled_data.csv') as f:
             reader = csv.reader(f)
@@ -31,4 +37,4 @@ def get_label():
     print(set(data))
     print(len(set(data)))
 
-get_label()
+generate_company_list()
