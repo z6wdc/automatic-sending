@@ -36,5 +36,3 @@ class User:
 
     def get_mobile(self):
         return self.mobile
-
-    
