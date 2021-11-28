@@ -54,6 +54,52 @@ def get_contact_url(url):
             return href_list
 
 
+def get_second_contact_url(url):
+    href_keyword_list = ['recruit', 'recruiting', 'recruitment', 'job', 'employ', 'entry', 'hire', 'hiring']
+    page_keyword_list = ['採用', '人事', '採用情報', '新卒', 'キャリア', '中途']
+
+    href_list = []
+
+    r = requests.get(url)
+    soup = BeautifulSoup(r.content, 'html.parser')
+
+    for contact_word in href_keyword_list:
+        tags = soup.find_all('a', href=lambda h: h and contact_word in h)
+
+        for tag in tags:
+            # 輸出超連結的文字
+            href = tag.get('href')
+
+            if 'http' in href:
+                href_list = href
+            elif href:
+                if url.endswith('/') and href.startswith('/'):
+                    href_list = url + href[1:]
+                else:
+                    href_list = url + href
+
+        if href_list:
+            return href_list
+
+    for contact_word in page_keyword_list:
+        tags = soup.find_all('a', string=lambda s: s and contact_word in s)
+
+        for tag in tags:
+            # 輸出超連結的文字
+            href = tag.get('href')
+
+            if 'http' in href:
+                href_list = href
+            elif href:
+                if url.endswith('/') and href.startswith('/'):
+                    href_list = url + href[1:]
+                else:
+                    href_list = url + href
+
+        if href_list:
+            return href_list
+
+
 def get_contact_form(url):
     input_type_list = ['text', 'tel', 'checkbox', 'radio', 'email', 'number']
     result = {}
@@ -85,7 +131,7 @@ def get_contact_form(url):
 
 
 def write_result_csv(dict):
-    with open(data_path + '/checked_url_list.csv', 'w', newline='') as csvfile:
+    with open(data_path + '/checked_url_list.csv', 'a', newline='') as csvfile:
         # 建立 CSV 檔寫入器
         writer = csv.writer(csvfile)
 
@@ -124,12 +170,12 @@ for file in os.listdir(data_path):
             for row in rows:
                 url = row[1]
 
-                if 'http' not in url:
-                    result_list[url] = 'wrong url'
+                if url in checked_dict:
+                    # result_list[url] = 'already checked'
                     continue
 
-                if url in checked_dict:
-                    result_list[url] = 'already checked'
+                if 'http' not in url:
+                    result_list[url] = 'wrong url'
                     continue
 
                 try:
@@ -142,7 +188,7 @@ for file in os.listdir(data_path):
                             input_dict[url] = contact_form
                             result_list[url] = 'OK'
                         else:
-                            second_contact_url = get_contact_url(contact_url)
+                            second_contact_url = get_second_contact_url(contact_url)
 
                             if second_contact_url:
                                 second_contact_form = get_contact_form(second_contact_url)
