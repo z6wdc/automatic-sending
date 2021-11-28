@@ -19,7 +19,7 @@ def main():
     elif model == 'lsi':
         model = LsiEstimator()
         options = {
-            'ratio_test': 0.2,
+            'ratio_test': 0.3,
             'seed': 100,
         }
         adapter = CSVTrainingAdapter(options)
