@@ -1,0 +1,110 @@
+url,input,type
+https://www.net-vision.co.jp/,"<input class=""custom-checkbox"" id=""checkbox-id8"" name=""個人情報取扱い"" type=""checkbox"" value=""確認""/>",acceptance
+https://www.sjoyc.com/,"<input class=""required form-control form-control-sm"" id=""address"" name=""address"" placeholder=""福岡県北九州市小倉北区浅野2-9-8 KMM南館 5階"" type=""text""/>",address
+https://www.net-vision.co.jp/,"<input name=""ご住所[]"" placeholder=""例：○○マンション101号"" type=""text""/>",address_building
+https://www.net-vision.co.jp/,"<input id=""address3"" name=""町域番地"" placeholder=""例：○○○1-2-3"" size=""40"" type=""text""/>",address_ban
+https://www.net-vision.co.jp/,"<input id=""address2"" name=""市区町村"" placeholder=""例：千代田区"" size=""40"" type=""text""/>",address_shi
+https://www.net-vision.co.jp/,"<input id=""address1"" name=""都道府県"" placeholder=""例：東京都"" size=""20"" type=""text""/>",city
+https://www.bilingual-gate.co.jp/,"<input class=""width-100p"" name=""mail_check"" placeholder=""確認のため、もう一度入力してください。"" type=""text""/>",email
+https://www.sjoyc.com/,"<textarea class=""form-control"" cols=""5"" id=""entry-comments"" name=""entry_comments"" placeholder="""" rows=""3""></textarea>",content
+https://www.net-vision.co.jp/,"<textarea cols=""50"" name=""ご相談内容"" placeholder=""ご相談・お問い合わせ内容をご入力ください。"" required="""" rows=""5""></textarea>",content
+https://www.liveworks.co.jp/,"<input aria-invalid=""false"" class=""wpcf7-form-control wpcf7-text form-width"" name=""your-kigyo"" size=""40"" type=""text"" value=""""/>",company
+https://www.liveworks.co.jp/,"<input aria-invalid=""false"" class=""wpcf7-form-control wpcf7-text form-width"" name=""your-busyo"" size=""40"" type=""text"" value=""""/>",department
+https://www.liveworks.co.jp/,"<input aria-invalid=""false"" class=""wpcf7-form-control wpcf7-text form-width"" name=""your-renraku"" size=""40"" type=""text"" value=""""/>",tel
+https://www.liveworks.co.jp/,"<textarea aria-invalid=""false"" class=""wpcf7-form-control wpcf7-textarea form-width"" cols=""40"" name=""your-message"" rows=""10""></textarea>",content
+https://www.sjoyc.com/,"<input class=""form-control form-control-sm"" name=""cpost"" placeholder=""開発部"" type=""text""/>",department
+https://www.sjoyc.com/,"<input class=""form-control form-control-sm"" name=""cposition"" placeholder=""開発部長"" type=""text""/>",job_title
+http://www.ecbo-sq.com/,"<input aria-label=""E-mail"" class=""_1SOvY has-custom-focus"" id=""input_comp-kgbywhpj"" maxlength=""250"" name=""email"" pattern=""^.+@.+\.[a-zA-Z]{2,63}$"" placeholder=""E-mail"" required="""" type=""email"" value=""""/>",email
+https://www.bilingual-gate.co.jp/,"<input class=""width-100p"" name=""mail"" placeholder=""【例】sample@mail.com"" type=""text"" value=""""/>",email
+https://www.sjoyc.com/,"<input class=""required form-control form-control-sm"" name=""mail"" placeholder=""saiyou@sjoyc.com"" type=""text""/>",email
+https://nextribe.co.jp/,"<input class=""ContactForm__Form-un7hw7-4 cOQuTF"" name=""email"" placeholder=""example@nextribe.co.jp"" style=""border:;background-color:"" type=""email"" value=""""/>",email
+https://www.net-vision.co.jp/,"<input name=""メールアドレス"" placeholder=""例：sample@exsample.com"" required="""" type=""text""/>",email
+https://www.liveworks.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-width"" name=""your-email"" size=""40"" type=""text"" value=""""/>",email
+http://www.ecbo-sq.com/,"<input aria-label=""名"" class=""_1SOvY has-custom-focus"" id=""input_comp-kg928i0r"" maxlength=""100"" name=""名"" placeholder=""名"" required="""" type=""text"" value=""""/>",first_name
+https://www.net-vision.co.jp/,"<input id=""名"" name=""名"" placeholder=""例：太郎"" required="""" type=""text""/>",first_name
+http://www.ecbo-sq.com/,"<input aria-label=""メイ"" class=""_1SOvY has-custom-focus"" id=""input_comp-kglvidq7"" maxlength=""100"" name=""メイ"" placeholder=""メイ"" required="""" type=""text"" value=""""/>",first_name_furi
+https://www.net-vision.co.jp/,"<input id=""メイ"" name=""メイ"" placeholder=""例：タロウ"" type=""text""/>",first_name_furi
+http://www.ecbo-sq.com/,"<input aria-label=""姓"" class=""_1SOvY has-custom-focus"" id=""input_comp-kg928i0g"" maxlength=""100"" name=""姓"" placeholder=""姓"" required="""" type=""text"" value=""""/>",last_name
+https://www.net-vision.co.jp/,"<input id=""姓"" name=""姓"" placeholder=""例：東京"" required="""" type=""text""/>",last_name
+http://www.ecbo-sq.com/,"<input aria-label=""セイ"" class=""_1SOvY has-custom-focus"" id=""input_comp-kglvh5l5"" maxlength=""100"" name=""セイ"" placeholder=""セイ"" required="""" type=""text"" value=""""/>",last_name_furi
+https://www.net-vision.co.jp/,"<input id=""セイ"" name=""セイ"" placeholder=""例：トウキョウ"" type=""text""/>",last_name_furi
+https://www.bilingual-gate.co.jp/,"<input class=""width-100p"" name=""input_name"" placeholder=""【例】山田　太郎"" type=""text"" value=""""/>",name
+https://www.sjoyc.com/,"<input class=""required form-control form-control-sm"" name=""name"" placeholder=""エスジョイ太郎"" type=""text""/>",name
+https://www.liveworks.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-width"" name=""your-name"" size=""40"" type=""text"" value=""""/>",name
+https://www.bilingual-gate.co.jp/,"<input class=""width-100p padding-2"" name=""name_kana"" placeholder=""【例】ヤマダ　タロウ"" type=""text"" value=""""/>",name_furi
+https://atl-info.co.jp/,"<textarea aria-describedby=""i35 i36"" aria-label=""您的回答"" aria-labelledby=""i34"" class=""quantumWizTextinputPapertextareaInput exportTextarea"" data-initial-dir=""auto"" data-initial-value="""" data-rows=""1"" dir=""auto"" disabled="""" jsaction=""input:Lg5SV;ti6hGc:XMgOHc;rcuQ6b:WYd;"" jscontroller=""gZjhIf"" jsname=""YPqjbf"" required="""" tabindex=""0""></textarea>",content
+https://www.kyoshin.co.jp/recruit/,"<select class=""dropdown"" name=""prefecture"">
+<option selected=""selected"" value=""all"">選択してください</option>
+<option value=""北海道"">北海道</option>
+<option value=""岩手県"">岩手県</option>
+<option value=""福島県"">福島県</option>
+<option value=""茨城県"">茨城県</option>
+<option value=""埼玉県"">埼玉県</option>
+<option value=""千葉県"">千葉県</option>
+<option value=""東京都"">東京都</option>
+<option value=""神奈川県"">神奈川県</option>
+<option value=""石川県"">石川県</option>
+<option value=""福井県"">福井県</option>
+<option value=""山梨県"">山梨県</option>
+<option value=""岐阜県"">岐阜県</option>
+<option value=""愛知県"">愛知県</option>
+<option value=""三重県"">三重県</option>
+<option value=""滋賀県"">滋賀県</option>
+<option value=""京都府"">京都府</option>
+<option value=""大阪府"">大阪府</option>
+<option value=""兵庫県"">兵庫県</option>
+<option value=""奈良県"">奈良県</option>
+<option value=""和歌山県"">和歌山県</option>
+<option value=""岡山県"">岡山県</option>
+<option value=""広島県"">広島県</option>
+<option value=""徳島県"">徳島県</option>
+<option value=""香川県"">香川県</option>
+<option value=""福岡県"">福岡県</option>
+<option value=""鹿児島県"">鹿児島県</option>
+</select>",city
+https://www.kyoshin.co.jp/recruit/,"<select class=""dropdown"" data-settings='{""cutOff"": 12}' name=""prefecture"">
+<option selected=""selected"" value=""all"">都道府県を選択</option>
+<option value=""北海道"">北海道</option>
+<option value=""岩手県"">岩手県</option>
+<option value=""福島県"">福島県</option>
+<option value=""茨城県"">茨城県</option>
+<option value=""埼玉県"">埼玉県</option>
+<option value=""千葉県"">千葉県</option>
+<option value=""東京都"">東京都</option>
+<option value=""神奈川県"">神奈川県</option>
+<option value=""石川県"">石川県</option>
+<option value=""福井県"">福井県</option>
+<option value=""山梨県"">山梨県</option>
+<option value=""岐阜県"">岐阜県</option>
+<option value=""愛知県"">愛知県</option>
+<option value=""三重県"">三重県</option>
+<option value=""滋賀県"">滋賀県</option>
+<option value=""京都府"">京都府</option>
+<option value=""大阪府"">大阪府</option>
+<option value=""兵庫県"">兵庫県</option>
+<option value=""奈良県"">奈良県</option>
+<option value=""和歌山県"">和歌山県</option>
+<option value=""岡山県"">岡山県</option>
+<option value=""広島県"">広島県</option>
+<option value=""徳島県"">徳島県</option>
+<option value=""香川県"">香川県</option>
+<option value=""福岡県"">福岡県</option>
+<option value=""鹿児島県"">鹿児島県</option>
+</select>",city
+https://www.sjoyc.com/,"<input checked="""" class=""required form-check-input"" id=""man"" name=""gender"" type=""radio"" value=""1""/>",gender_m
+https://www.sjoyc.com/,"<input class=""required form-check-input"" id=""woman"" name=""gender"" type=""radio"" value=""2""/>",gender_f
+https://www.liveworks.co.jp/,"<input checked=""checked"" name=""your-service"" type=""radio"" value=""製品に関するお問合せ""/>",subject_not_other
+https://atl-info.co.jp/,"<input aria-label=""其他回應"" autocomplete=""off"" class=""quantumWizTextinputSimpleinputInput exportInput"" data-initial-dir=""auto"" data-initial-value="""" dir=""auto"" disabled="""" jsname=""YPqjbf"" tabindex=""0"" type=""text""/>",subject_other
+https://www.net-vision.co.jp/,"<input class=""custom-checkbox mb20"" id=""radio-id4"" name=""ご相談[]"" type=""checkbox"" value=""その他お問い合わせ""/>",subject_other
+https://www.liveworks.co.jp/,"<input name=""your-service"" type=""radio"" value=""その他お問合せ""/>",subject_other
+https://www.liveworks.co.jp/,"<input name=""your-service"" type=""radio"" value=""採用に関するお問合せ""/>",subject_not_other
+http://www.ecbo-sq.com/,"<input aria-label=""電話番号"" class=""_1SOvY has-custom-focus"" id=""input_comp-kglvizjh"" maxlength=""100"" name=""電話番号"" placeholder=""電話番号"" required="""" type=""text"" value=""""/>",tel
+http://www.ecbo-sq.com/,"<input aria-label=""住所"" class=""_1SOvY has-custom-focus"" id=""input_comp-kgbyz51z"" maxlength=""50"" name=""phone"" placeholder=""住所"" required="""" type=""tel"" value=""""/>",address
+https://www.bilingual-gate.co.jp/,"<input class=""width-100p"" name=""tel"" placeholder=""【例】0369128942"" type=""text"" value=""""/>",tel
+https://www.sjoyc.com/,"<input class=""required form-control form-control-sm"" name=""phone"" placeholder=""093-513-8222"" type=""text""/>",tel
+https://www.net-vision.co.jp/,"<input name=""お電話番号"" placeholder=""例：1234567890"" type=""text""/>",tel
+https://www.net-vision.co.jp/,"<input name=""ホームページURL"" placeholder=""例：http://exsample.com/"" type=""text""/>",url
+http://www.ecbo-sq.com/,"<input aria-label=""郵便番号"" class=""_1SOvY has-custom-focus"" id=""input_comp-kg928i0w2"" maxlength=""50"" name=""phone"" placeholder=""郵便番号"" required="""" type=""tel"" value=""""/>",zip
+https://www.sjoyc.com/,"<input class=""required form-control form-control-sm"" id=""postcode"" name=""postcode"" placeholder=""802-0001"" type=""text""/>",zip
+https://www.net-vision.co.jp/,"<input id=""postcode1"" maxlength=""3"" name=""zip1"" placeholder=""例：123"" type=""text""/>",zip
+https://www.net-vision.co.jp/,"<input id=""postcode2"" maxlength=""4"" name=""zip2"" onkeyup=""AjaxZip3.zip2addr('zip1','zip2','都道府県','市区町村','町域番地');"" placeholder=""例：4567"" size=""5"" type=""text""/>",zip

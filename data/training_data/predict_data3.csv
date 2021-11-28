@@ -1,0 +1,70 @@
+url,input,type
+https://www.sky-egg.jp/,"<input class=""agree__check js-agree"" name=""a93f483e56"" type=""checkbox"" value=""""/>",acceptance
+https://cacco.co.jp/,"<input class=""input-agree"" id=""checkbtn"" name=""data[ContactRecruit][policy]"" type=""checkbox"" value=""同意する""/>",acceptance
+https://cacco.co.jp/,"<input class=""input-agree"" id=""checkbtn2"" name=""data[ContactRecruit][policy]"" type=""checkbox"" value=""同意する""/>",acceptance
+https://cacco.co.jp/,"<input class=""input-agree"" id=""checkbtn3"" name=""data[ContactRecruit][policy]"" type=""checkbox"" value=""同意する""/>",acceptance
+https://cacco.co.jp/,"<input class=""input-agree"" id=""checkbtn4"" name=""data[ContactRecruit][policy]"" type=""checkbox"" value=""同意する""/>",acceptance
+http://www.trinify.com/,"<input id=""privacy-policy-1"" name=""個人情報保護方針[data][]"" type=""checkbox"" value="" ""/>",acceptance
+https://www.lintomo.co.jp/,"<input class=""form__check"" id=""checkbox-agree-1"" name=""checkbox-agree[data][]"" type=""checkbox"" value=""同意する""/>",acceptance
+https://www.cscloud.co.jp/,"<input name=""agreement[]"" type=""checkbox"" value=""個人情報保護方針に同意する""><span class=""wpcf7-list-item-label"">個人情報保護方針に同意する</span></input>",acceptance
+https://cacco.co.jp/,"<input class=""input-zip"" id=""ContactRecruitAddress"" maxlength=""255"" name=""data[ContactRecruit][address]"" placeholder=""例：東京都xxxxxxxxx"" type=""text""/>",address
+http://www.trinify.com/,"<input name=""ご住所"" placeholder=""ご住所を入力してください"" size=""60"" type=""text"" value=""""/>",address
+https://www.lintomo.co.jp/,"<input class=""form__text"" id=""address"" name=""address"" placeholder=""〇〇区"" size=""60"" type=""text"" value=""""/>",address
+http://www.trinify.com/,"<input name=""建物名"" placeholder=""建物名・階数等を入力してください"" size=""60"" type=""text"" value=""""/>",address_building
+https://www.lintomo.co.jp/,"<select class=""form__select prefectures__text"" id=""prefectures"" name=""prefectures"">
+<option value=""東京都"">
+			東京都		</option>
+<option value=""千葉県"">
+			千葉県		</option>
+<option value=""埼玉県"">
+			埼玉県		</option>
+</select>",city
+https://www.cscloud.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required br_box p-region p-locality p-street-address"" name=""city"" size=""40"" type=""text"" value=""""/>",city
+https://cacco.co.jp/,"<input id=""ContactRecruitCompany"" maxlength=""50"" name=""data[ContactRecruit][company]"" placeholder=""例：かっこ株式会社"" required=""required"" type=""text""/>",company
+http://www.trinify.com/,"<input name=""会社名"" placeholder=""株式会社カンパニー"" size=""60"" type=""text"" value=""""/>",company
+https://www.lintomo.co.jp/,"<input class=""form__text"" id=""company"" name=""company"" placeholder=""名前"" size=""60"" type=""text"" value=""""/>",company
+https://cacco.co.jp/,"<input id=""ContactRecruitEmailConfirm"" name=""data[ContactRecruit][email_confirm]"" placeholder=""例：test@example.com"" required=""required"" type=""email""/>",email
+https://cacco.co.jp/,"<textarea cols=""30"" id=""ContactRecruitDetail"" name=""data[ContactRecruit][detail]"" placeholder=""お問い合わせ内容"" rows=""6""></textarea>",content
+http://www.trinify.com/,"<textarea cols=""50"" name=""お問い合わせ内容"" rows=""5""></textarea>",content
+https://www.lintomo.co.jp/,"<textarea class=""form__textarea"" cols=""50"" id=""message"" name=""message"" placeholder=""お問い合わせ内容をご入力ください。"" rows=""5""></textarea>",content
+https://www.cscloud.co.jp/,"<textarea class=""br_box textarea"" cols=""50"" name=""comment"" placeholder="""" rows=""5""></textarea>",content
+https://cacco.co.jp/,"<input id=""ContactRecruitDepartment"" maxlength=""50"" name=""data[ContactRecruit][department]"" placeholder=""例：かっこ部"" required=""required"" type=""text""/>",department
+http://www.trinify.com/,"<input name=""部署名"" placeholder=""部署を入力してください"" size=""60"" type=""text"" value=""""/>",department
+https://www.lintomo.co.jp/,"<input class=""form__text"" id=""depertment"" name=""depertment"" placeholder=""〇〇部署"" size=""60"" type=""text"" value=""""/>",department
+https://www.lintomo.co.jp/,"<input class=""form__text"" id=""role"" name=""role"" placeholder=""〇〇部署"" size=""60"" type=""text"" value=""""/>",department
+https://www.sky-egg.jp/,"<input class=""pure-input-1"" maxlength=""100"" name=""email"" style=""max-width: 100%;"" type=""text"" value=""""/>",email
+https://www.sky-egg.jp/,"<input class=""pure-input-1"" maxlength=""100"" name=""email_check"" oncopy=""return false"" onpaste=""return false"" style=""max-width: 100%;"" type=""text"" value=""""/>",email
+https://cacco.co.jp/,"<input id=""ContactRecruitEmail"" maxlength=""255"" name=""data[ContactRecruit][email]"" placeholder=""例：test@example.com"" required=""required"" type=""email""/>",email
+http://www.trinify.com/,"<input class=""js-input-hankaku"" name=""メールアドレス"" placeholder=""info@mail.com"" size=""60"" type=""text"" value=""""/>",email
+https://www.lintomo.co.jp/,"<input class=""form__email"" data-conv-half-alphanumeric=""true"" id=""mail"" name=""mail"" placeholder=""sample@sample.com"" size=""60"" type=""email"" value=""""/>",email
+https://career-engineer.jp/,"<input class=""inputtext login_form_input_box"" data-testid=""royal_email"" id=""email"" name=""email"" type=""email""/>",email
+https://www.cscloud.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email br_box"" name=""email"" size=""40"" type=""email"" value=""""/>",email
+https://www.cscloud.co.jp/,"<input name=""gender"" type=""radio"" value=""女性""/>",gender_f
+https://www.cscloud.co.jp/,"<input checked=""checked"" name=""gender"" type=""radio"" value=""男性""/>",gender_m
+http://www.trinify.com/,"<input name=""役職"" placeholder=""現在の役職を入力してください"" size=""60"" type=""text"" value=""""/>",job_title
+https://www.sky-egg.jp/,"<input class=""pure-input-2-3"" maxlength=""30"" name=""name"" type=""text"" value="""">
+<br/>
+</input>",name
+https://cacco.co.jp/,"<input id=""ContactRecruitName"" maxlength=""50"" name=""data[ContactRecruit][name]"" placeholder=""例：山田太郎"" required=""required"" type=""text""/>",name
+http://www.trinify.com/,"<input name=""お名前"" placeholder=""山田 太郎"" size=""60"" type=""text"" value=""""/>",name
+https://www.lintomo.co.jp/,"<input class=""form__text"" id=""name"" name=""name"" placeholder=""田中　太郎"" size=""60"" type=""text"" value=""""/>",name
+https://www.sky-egg.jp/,"<input class=""pure-input-2-3"" maxlength=""30"" name=""kana"" type=""text"" value=""""/>",name_furi
+https://cacco.co.jp/,"<input id=""ContactRecruitKana"" maxlength=""50"" name=""data[ContactRecruit][kana]"" placeholder=""例：やまだたろう"" required=""required"" type=""text""/>",name_furi
+http://www.trinify.com/,"<input class=""js-input-katakana"" name=""お名前フリガナ"" placeholder=""ヤマダ タロウ"" size=""60"" type=""text"" value=""""/>",name_furi
+https://www.cscloud.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required br_box"" name=""kana"" size=""40"" type=""text"" value=""""/>",name_furi
+https://www.lintomo.co.jp/,"<input class=""form__text"" id=""building"" name=""buildin"" placeholder=""〇〇ビルディング"" size=""60"" type=""text"" value=""""/>",address_building
+https://www.cscloud.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required br_box p-extended-address"" name=""building"" size=""40"" type=""text"" value=""""/>",address_building
+https://www.cscloud.co.jp/,"<select aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-select wpcf7-validates-as-required br_select"" name=""job""><option value="""">選択してください</option><option value=""セールスエンジニア"">セールスエンジニア</option><option value=""マーケティングチームリーダー"">マーケティングチームリーダー</option><option value=""アカウントセールス"">アカウントセールス</option><option value=""カスタマーサクセス責任者"">カスタマーサクセス責任者</option><option value=""パートナーセールス"">パートナーセールス</option><option value=""インサイドセールス"">インサイドセールス</option><option value=""オープンポジション（ビジネス）"">オープンポジション（ビジネス）</option><option value=""海外事業責任者"">海外事業責任者</option><option value=""シニアセキュリティエンジニア"">シニアセキュリティエンジニア</option><option value=""エンジニアリーダー（WafCharm）"">エンジニアリーダー（WafCharm）</option><option value=""バックエンドエンジニア"">バックエンドエンジニア</option><option value=""テックリード（システムアーキテクト）"">テックリード（システムアーキテクト）</option><option value=""ソフトウェアエンジニア"">ソフトウェアエンジニア</option><option value=""Railsエンジニア（攻撃遮断くん）"">Railsエンジニア（攻撃遮断くん）</option><option value=""Railsエンジニア(WafCharm)"">Railsエンジニア(WafCharm)</option><option value=""テクニカルサポートエンジニア（US事業）"">テクニカルサポートエンジニア（US事業）</option><option value=""テクニカルサポート"">テクニカルサポート</option><option value=""オープンポジション（エンジニア）"">オープンポジション（エンジニア）</option><option value=""プロダクトマネージャー（開発・テクニカル領域）"">プロダクトマネージャー（開発・テクニカル領域）</option><option value=""広報責任者"">広報責任者</option><option value=""人事 / 採用広報・組織開発担当"">人事 / 採用広報・組織開発担当</option><option value=""人事 / 中途採用担当"">人事 / 中途採用担当</option><option value=""財務経理リーダー"">財務経理リーダー</option></select>",job_title
+https://www.lintomo.co.jp/,"<input class=""form__radio"" id=""service-4"" name=""service"" type=""radio"" value=""その他""/>",subject_other
+https://www.lintomo.co.jp/,"<input class=""form__check"" id=""business-6"" name=""business[data][]"" type=""checkbox"" value=""その他""/>",subject_other
+https://cacco.co.jp/,"<input class=""short zip-code"" id=""ContactRecruitPostcode"" maxlength=""10"" name=""data[ContactRecruit][postcode]"" placeholder=""例：107-0051"" type=""text""/>",zip
+https://cacco.co.jp/,"<input id=""ContactRecruitTel"" maxlength=""20"" name=""data[ContactRecruit][tel]"" placeholder=""09000000000"" type=""text""/>",tel
+http://www.trinify.com/,"<input class=""js-input-hankaku"" name=""TEL"" placeholder=""123-4567-8901"" size=""60"" type=""text"" value=""""/>",tel
+https://www.cscloud.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel br_box"" name=""tel"" size=""40"" type=""tel"" value=""""/>",tel
+https://www.lintomo.co.jp/,"<input class=""form__tel"" data-conv-half-alphanumeric=""true"" maxlength=""5"" name=""tel[data][0]"" size=""6"" type=""text"" value=""""/>",tel
+https://www.lintomo.co.jp/,"<input class=""form__tel"" data-conv-half-alphanumeric=""true"" maxlength=""4"" name=""tel[data][1]"" size=""5"" type=""text"" value=""""/>",tel
+https://www.lintomo.co.jp/,"<input class=""form__tel"" data-conv-half-alphanumeric=""true"" maxlength=""4"" name=""tel[data][2]"" size=""5"" type=""text"" value=""""/>",tel
+http://www.trinify.com/,"<input class=""c-forms__input is-sm js-input-hankaku"" name=""郵便番号"" placeholder=""000-0000"" size=""60"" type=""text"" value=""""/>",zip
+https://www.lintomo.co.jp/,"<input class=""form__text postal-code__text"" id=""postal-code"" name=""postal-code"" placeholder=""0000000"" size=""60"" type=""text"" value=""""/>",zip
+https://www.cscloud.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required br_box br_box-auto is-addredd p-postal-code"" maxlength=""3"" name=""zip1"" size=""6"" type=""text"" value=""""/>",zip
+https://www.cscloud.co.jp/,"<input aria-invalid=""false"" aria-required=""true"" class=""wpcf7-form-control wpcf7-text wpcf7-validates-as-required br_box br_box-auto is-addredd p-postal-code"" maxlength=""4"" name=""zip2"" size=""8"" type=""text"" value=""""/>",zip
