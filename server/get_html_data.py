@@ -151,7 +151,7 @@ def get_html_data():
     result_list = {}
 
     for file in os.listdir(data_path):
-        if file.endswith('.csv') and file.startswith('test'):
+        if file.endswith('.csv') and file.startswith('company_list'):
             with open(data_path + file, newline='', encoding='utf-8') as csvfile:
                 # 讀取 CSV 檔案內容
                 rows = csv.reader(csvfile)
