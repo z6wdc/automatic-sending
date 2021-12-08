@@ -1,17 +1,20 @@
+import csv
 from bs4 import BeautifulSoup
 from selenium import webdriver
+from collections import defaultdict
 
-TEST_URL = 'https://www.data4cs.co.jp/contact'
+def read_label_data():
+    data = defaultdict(list)
+    with open('./data/training_data/labeled_data2.csv') as f:
+            reader = csv.reader(f)
+            for index, row in enumerate(reader):
+                if index == 0:
+                    continue
+                data[row[0]].append((row[1], row[2]))
 
-TEST_DATA = {
-    '<input type="text" name="会社名" id="company" size="60" value>':'株式会社 AI Academy',
-    '<input class="name1" data-conv-half-alphanumeric="true" maxlength="10" name="名" placeholder="名" size="10" type="text" value=""/>':'育豪',
-    '<input class="name1" data-conv-half-alphanumeric="true" maxlength="10" name="メイ" placeholder="メイ" size="10" type="text" value=""/>':'イクゴウ',
-    '<input class="name1" data-conv-half-alphanumeric="true" maxlength="10" name="姓" placeholder="姓" size="10" type="text" value=""/>':'張',
-    '<input class="name1" data-conv-half-alphanumeric="true" maxlength="10" name="セイ" placeholder="セイ" size="10" type="text" value=""/>':'チョウ'
-}
+    return data
 
-def input_data(url, data):
+def input_data(input_data):
     driver = init_webdriver(url)
 
     for k, v in data.items():
@@ -45,4 +48,4 @@ def init_webdriver(url):
         print(e)
 
 if __name__ == '__main__':
-    input_data(TEST_URL, TEST_DATA)
+    read_label_data()

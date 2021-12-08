@@ -1,11 +1,27 @@
 
-{'tel_company', 'company', 'address_shi_ban', 'acceptance', 'address_ban', 'subject_other', 'company_furi', 'fax_3', 'fax_2', 'subject_recruit', 'last_name_furi', 'fax', 'last_name_furl', 'name_furi', 'subject', 'address_ban_building', 'url', 'gender_f', 'gender_m', 'type_personal', 'city', 'department', 'first_name', 'address', 'job_title', 'type_media', 'last_name', 'fax_1', 'address_shi', 'name', 'inquiry', 'content', 'mobile', 'address_building', 'type_company'}
 
 class User:
 
     def __init__(self):
-        self.zip1 = '812'
-        self.zip2 = '0017'
+        self.first_name = '太郎'
+        self.first_name_furi = 'たろう'
+        self.last_name = '東京'
+        self.last_name_furi = 'とうきょう'
+        self.gender = 'male'
+        self.company = 'Data Science Academy'
+        self.company_furi = 'データサイエンスアカデミー'
+        self.tel1 = '03'
+        self.tel2 = '5422'
+        self.tel3 = '6929'
+        self.email = 'someone@ai-academy.org'
+        self.zip1 = '106'
+        self.zip2 = '0047'
+        self.prefecture = '東京都'
+        self.area = '港区'
+        self.city = '南麻布'
+        self.area_code = '5-2-32'
+        self.building = '興和広尾ビル'
+        self.context = '問い合わせ内容'
 
     def get_first_name_furi(self):
         return ''
