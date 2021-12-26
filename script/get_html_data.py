@@ -3,7 +3,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 
-data_path = '../data/'
+data_path = './data/'
 
 
 def get_contact_url(url):
@@ -150,9 +150,9 @@ def write_data_csv(name, url, contact_url, data_list):
 def get_html_data():
     result_list = {}
 
-    for file in os.listdir(data_path):
-        if file.endswith('.csv') and file.startswith('company_list'):
-            with open(data_path + file, newline='', encoding='utf-8') as csvfile:
+    for file in os.listdir(data_path + 'test_data/'):
+        if file.endswith('.csv') and file.startswith('TestList'):
+            with open(data_path + 'test_data/' + file, newline='', encoding='utf-8') as csvfile:
                 # 讀取 CSV 檔案內容
                 rows = csv.reader(csvfile)
 
@@ -160,7 +160,7 @@ def get_html_data():
                     url = row[1]
 
                     if 'http' not in url:
-                        result_list[url] = [row[0], url, 'wrong url']
+                        result_list[url] = [row[0], url, 'result']
                         continue
 
                     try:

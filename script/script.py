@@ -40,7 +40,7 @@ def input_data(input_data):
 
 def init_webdriver(url):
     try:
-        driver = webdriver.Chrome(executable_path='./script/chromedriver')
+        driver = webdriver.Chrome(executable_path='./server/chromedriver')
         driver.set_page_load_timeout(30)
         driver.get(url)
         return driver
@@ -49,3 +49,12 @@ def init_webdriver(url):
 
 if __name__ == '__main__':
     read_label_data()
+import sys
+import pprint
+pprint.pprint(sys.path)
+
+import script.get_html_data as ghd
+import script.labeling as label
+
+ghd.get_html_data()
+label.labeling()
