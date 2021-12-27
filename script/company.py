@@ -38,4 +38,4 @@ def get_label():
     print(len(set(data)))
 
 if __name__ == '__main__':
-    print('main')
+    get_label()

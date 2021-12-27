@@ -1,7 +1,3 @@
-import sys
-import pprint
-pprint.pprint(sys.path)
-
 from model import lsi
 from adapter.inference import CSVInferenceAdapter
 import csv
