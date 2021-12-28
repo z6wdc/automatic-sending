@@ -57,7 +57,7 @@ USER_DATA = {
     'address_shi_ban':'港区南麻布5-2-32',
     'address_building':'興和広尾ビル7F',
     'address_ban_building':'5-2-32興和広尾ビル7F',
-    'city':'',
+    'city':'港区',
     'tel':'05071037452',
     'tel_company':'0354226929',
     'mobile':'05071037452',

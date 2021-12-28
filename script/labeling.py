@@ -5,7 +5,6 @@ import pathlib
 
 model = None
 
-
 def labeling():
     global model
     print("initializing model...")

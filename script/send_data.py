@@ -1,4 +1,5 @@
 import csv
+from .user_data import get_input_data
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from collections import defaultdict
@@ -37,31 +38,35 @@ def send():
         driver.get(k[1])
 
         for html_tag, label in v:
-            soup = BeautifulSoup(html_tag, 'html5lib')
-            input = soup.find('input')
-            try:
-                attrs = input.attrs
-            except AttributeError:
-                print(AttributeError)
-
-            print(attrs)
-            if 'id' in attrs.keys():
-                selector = f'//input[@id="{attrs["id"]}"]'
-            elif 'name' in attrs.keys():
-                selector = f'//input[@name="{attrs["name"]}"]'
+            if label == 'subject':
+                pass
             else:
-                print(f'{html_tag}が指定できない')
-                result[k[0]] = f'{html_tag}が指定できない'
-                continue
+                print(html_tag, label)
+                soup = BeautifulSoup(html_tag, 'html5lib')
+                input = soup.find('input')
+                try:
+                    attrs = input.attrs
+                except AttributeError:
+                    print(AttributeError)
 
-            try:
-                element = driver.find_element_by_xpath(selector)
-                element.send_keys(label)
-            except Exception as e:
-                print(e)
-                result[k[0]] = e
+                if 'id' in attrs.keys():
+                    selector = f'//input[@id="{attrs["id"]}"]'
+                elif 'name' in attrs.keys():
+                    selector = f'//input[@name="{attrs["name"]}"]'
+                else:
+                    print(f'{html_tag}が指定できない')
+                    result[k[0]] = f'{html_tag}が指定できない'
+                    continue
+
+                try:
+                    element = driver.find_element_by_xpath(selector)
+                    element.send_keys(get_input_data(label))
+                except Exception as e:
+                    print(e)
+                    result[k[0]] = e
             
-            break
+        print(result)
+        input()
         break
 
     driver.close()
