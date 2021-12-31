@@ -202,5 +202,6 @@ def get_html_data():
                 except:
                     result_list[url] = [name, url, 'unexpected error']
 
-    write_result_csv(result_list)
     write_data_csv(data_list)
+    return result_list
+

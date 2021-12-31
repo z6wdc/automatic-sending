@@ -28,11 +28,13 @@ def send():
 
     data = read_label_data()
     for k, v in data.items():
+        result[k] = 'OK' # default value
+
         try:
             driver = webdriver.Chrome(executable_path='./tool/chromedriver')    
             driver.set_page_load_timeout(30)
         except Error as e:
-            result[k[0]] = e
+            result[k] = 'selenium起動失敗'
 
         driver.get(k[1]) # open contact page
         for html_tag, label in v:
@@ -46,15 +48,14 @@ def send():
                 try:
                     attrs = textarea.attrs
                 except AttributeError as e:
-                    result[k[0]] = e
+                    result[k] = f'{label}の{html_tag}が探せない'
 
                 if 'id' in attrs.keys():
                     selector = f'//textarea[@id="{attrs["id"]}"]'
                 elif 'name' in attrs.keys():
                     selector = f'//textarea[@name="{attrs["name"]}"]'
                 else:
-                    print(f'{html_tag}が指定できない')
-                    result[k[0]] = f'{html_tag}が指定できない'
+                    result[k] = f'{label}の{html_tag}が探せない'
                     continue
             else:
                 print(label)
@@ -63,26 +64,29 @@ def send():
                 try:
                     attrs = input.attrs
                 except AttributeError as e:
-                    result[k[0]] = e
+                    result[k] = f'{label}の{html_tag}が探せない'
 
                 if 'id' in attrs.keys():
                     selector = f'//input[@id="{attrs["id"]}"]'
                 elif 'name' in attrs.keys():
                     selector = f'//input[@name="{attrs["name"]}"]'
                 else:
-                    print(f'{html_tag}が指定できない')
-                    result[k[0]] = f'{html_tag}が指定できない'
+                    result[k] = f'{label}の{html_tag}が探せない'
                     continue
 
             try:
                 element = driver.find_element_by_xpath(selector)
                 element.send_keys(get_input_data(label))
             except Exception as e:
-                result[k[0]] = e
+                result[k] = e
         
         # click the send button
+        try:
+            driver.find_element_by_xpath('//input[@type="submit"]').click()
+        except Exception as e:
+            result[k] = '送信ボタンクッリク失敗'
 
-        print(result)
         driver.close()
         driver.quit()
+
     return result
