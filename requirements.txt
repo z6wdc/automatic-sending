@@ -10,3 +10,5 @@ tensorflow~=2.6.0
 gensim~=4.1.2
 scikit-learn~=1.0
 aiohttp==3.7.4
+mecab-python3
+unidic-lite

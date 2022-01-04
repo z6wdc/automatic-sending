@@ -1,25 +1,24 @@
-from model.lsi import LsiEstimator
+from model import lsi
 from adapter.inference import CSVInferenceAdapter
 import csv
 import pathlib
 
 model = None
 
-
 def labeling():
     global model
     print("initializing model...")
-    model = LsiEstimator()
+    model = lsi.LsiEstimator()
     options = {}
     adapter = CSVInferenceAdapter(options)
     model.set_adapter(adapter)
-    model.load("../server/models/lsi")
+    model.load("./server/models/lsi")
 
-    with open('../data/result/labeled_data.csv', 'w', newline='') as csvfile:
+    with open('./data/result/labeled_data.csv', 'w', newline='') as csvfile:
         # 建立 CSV 檔寫入器
         writer = csv.writer(csvfile)
 
-        with open('../data/result/html_data.csv', newline='') as data_csv:
+        with open('./data/result/html_data.csv', newline='') as data_csv:
             reader = csv.reader(data_csv)
             data = list(reader)
 

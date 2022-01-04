@@ -3,8 +3,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 
-data_path = '../data/'
-
+data_path = './data/'
 
 def get_contact_url(url):
     href_keyword_list = ['contact', 'inquiry', 'otoiawase', 'toiawase', 'form', 'mailform', 'contactform', 'support',
@@ -138,54 +137,71 @@ def write_result_csv(dict):
             writer.writerow(data)
 
 
-def write_data_csv(name, url, contact_url, data_list):
-    with open(data_path + 'result/html_data.csv', 'a', newline='') as csvfile:
+def write_data_csv(data_list):
+    with open(data_path + 'result/html_data.csv', 'w', newline='') as csvfile:
         # 建立 CSV 檔寫入器
         writer = csv.writer(csvfile)
 
-        for data, tag in data_list.items():
-            writer.writerow([name, url, contact_url, data])
+        for data in data_list:
+            for form in data[3].keys():
+                writer.writerow([data[0], data[1], data[2], form])
 
+
+def read_company_list(file_path):
+    data = {}
+    duplicated = set()
+    with open(file_path, newline='', encoding='utf-8') as csvfile:
+        # 讀取 CSV 檔案內容
+        rows = csv.reader(csvfile)
+        next(rows, None) # pass the first row
+        for row in rows:
+            if row[0] in data:
+                duplicated.add(row[0])
+            else:
+                data[row[0]] = row[1]
+
+    print(f'会社数:{len(data.keys())}')
+    print(f'被る会社数:{len(duplicated)}')
+    print(f'被る会社:{duplicated}')
+    return data
 
 def get_html_data():
     result_list = {}
+    data_list = []
+    for file in os.listdir(data_path + 'test_data/'):
+        if file.endswith('.csv') and file.startswith('TestList'):
+            data = read_company_list(data_path + 'test_data/' + file)
+            
+            for name, url in data.items():
+                if 'http' not in url:
+                    result_list[url] = [name, url, 'result']
+                    continue
 
-    for file in os.listdir(data_path):
-        if file.endswith('.csv') and file.startswith('company_list'):
-            with open(data_path + file, newline='', encoding='utf-8') as csvfile:
-                # 讀取 CSV 檔案內容
-                rows = csv.reader(csvfile)
+                try:
+                    contact_url = get_contact_url(url)
 
-                for row in rows:
-                    url = row[1]
+                    if contact_url:
+                        contact_form = get_contact_form(contact_url)
 
-                    if 'http' not in url:
-                        result_list[url] = [row[0], url, 'wrong url']
-                        continue
-
-                    try:
-                        contact_url = get_contact_url(url)
-
-                        if contact_url:
-                            contact_form = get_contact_form(contact_url)
-
-                            if contact_form:
-                                write_data_csv(row[0], url, contact_url, contact_form)
-                            else:
-                                second_contact_url = get_second_contact_url(contact_url)
-
-                                if second_contact_url:
-                                    second_contact_form = get_contact_form(second_contact_url)
-
-                                    if second_contact_form:
-                                        write_data_csv(row[0], url, second_contact_url, second_contact_form)
-                                    else:
-                                        result_list[url] = [row[0], url, 'contact form not found']
-                                else:
-                                    result_list[url] = [row[0], url, 'contact form not found']
+                        if contact_form:
+                            data_list.append((name, url, contact_url, contact_form))
                         else:
-                            result_list[url] = [row[0], url, 'contact page not found']
-                    except:
-                        result_list[url] = [row[0], url, 'unexpected error']
+                            second_contact_url = get_second_contact_url(contact_url)
 
-    write_result_csv(result_list)
+                            if second_contact_url:
+                                second_contact_form = get_contact_form(second_contact_url)
+
+                                if second_contact_form:
+                                    data_list.append((name, url, second_contact_url, second_contact_form))
+                                else:
+                                    result_list[url] = [name, url, 'contact form not found']
+                            else:
+                                result_list[url] = [name, url, 'contact form not found']
+                    else:
+                        result_list[url] = [name, url, 'contact page not found']
+                except:
+                    result_list[url] = [name, url, 'unexpected error']
+
+    write_data_csv(data_list)
+    return result_list
+

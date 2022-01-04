@@ -37,4 +37,5 @@ def get_label():
     print(set(data))
     print(len(set(data)))
 
-generate_company_list()
+if __name__ == '__main__':
+    get_label()
