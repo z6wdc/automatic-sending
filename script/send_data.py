@@ -58,7 +58,6 @@ def send():
                     result[k] = f'{label}の{html_tag}が探せない'
                     continue
             else:
-                print(label)
                 soup = BeautifulSoup(html_tag, 'html5lib')
                 input = soup.find('input')
                 try:
@@ -86,7 +85,6 @@ def send():
         except Exception as e:
             result[k] = '送信ボタンクッリク失敗'
 
-        driver.close()
         driver.quit()
 
     return result
