@@ -23,9 +23,6 @@ def read_label_data():
 def send():
     result = {}
 
-    driver = webdriver.Chrome(executable_path='./tool/chromedriver')
-    driver.set_page_load_timeout(30)
-
     data = read_label_data()
     for k, v in data.items():
         result[k] = 'OK' # default value
